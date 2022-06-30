@@ -1,0 +1,77 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+footer {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 0;
+  background: $black;
+  color: $gold;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .copyright{
+      div {
+        font-size: 80%;
+        opacity: 0.5;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.cookie {
+  padding: 20px;
+  background: red;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .cookie_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .consent {
+    flex-direction: column;
+    .con_text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .con_buttons {
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) { // max-width: 1440px
+}
+
+@media screen and (max-width: 1024px) { // max-width: 1024px
+}
+
+@media screen and (max-width: 768px) { // max-width: 768px
+}
+
+@media screen and (max-width: 590px) { // max-width: 590px
+  footer {
+    color: $gold;
+    .container {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .copyright {
+        text-align: center;
+      }
+    }
+  }
+}
