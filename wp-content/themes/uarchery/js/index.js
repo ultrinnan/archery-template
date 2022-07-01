@@ -1,4 +1,3 @@
-
 //This is to fix header on mobile scroll
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -36,6 +35,13 @@ jQuery(document).ready(function($) {
     //     $('.modal_box .modal_main').removeClass('hidden');
     // });
 
+    $('.menu_search').on('click', function (e) {
+        $('.menu_search').toggleClass('active');
+        console.log('search');
+        // $('.modal_box').removeClass('hidden');
+        // $('.modal_box .modal_main').removeClass('hidden');
+    });
+
     $('.close_modal, .modal_box, .modal_box .modal_check_success').on('click', function(e) {
         $('body').removeClass('lock');
         $('.modal_box, .header .modal_main, .modal_box .modal_main, .modal_box .modal_thanks').addClass('hidden');
@@ -45,21 +51,6 @@ jQuery(document).ready(function($) {
     //     $('.modal_main').addClass('hidden');
     //     $('.modal_thanks').removeClass('hidden');
     // }, false );
-
-    // $('.feedback_box').slick({
-    //     rows: 1,
-    //     centerMode: false,
-    //     slidesToShow: 1,
-    //     swipeToSlide: true,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     dots: false,
-    //     arrows: true,
-    //     prevArrow: $('.feedback_prev'),
-    //     nextArrow: $('.feedback_next'),
-    //     infinite: true,
-    //     speed: 500,
-    // });
 
 
     $('#accept_cookie').on('click', function (e) {

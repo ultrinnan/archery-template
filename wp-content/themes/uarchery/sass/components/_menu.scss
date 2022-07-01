@@ -5,6 +5,26 @@
   display: none;
 }
 
+.menu_icon {
+  width: 20px;
+  height: 20px;
+  &.member {
+    background: url(image-url('/icons/user.svg')) center no-repeat;
+    background-size: cover;
+  }
+  &.support {
+    background: url(image-url('/icons/hand-holding-heart.svg')) center no-repeat;
+    background-size: cover;
+  }
+}
+.menu_title {
+  margin-top: 4px;
+  font-size: 10px;
+  color: $blue;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .header_menu {
   display: flex;
   flex-direction: row;
@@ -12,78 +32,56 @@
   .menu_list {
     display: flex;
     flex-direction: row;
-    text-transform: uppercase;
-    .menu-item {
-      margin: 0 8px;
+    li {
+      display: flex;
+      align-items: center;
       a {
         display: block;
-        position: relative;
-        padding: 8px;
-        text-decoration: none;
-        &:after {
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          content: "";
-          height: 2px;
-          width: 0;
-          background-color: $gold;
-          transition: width 0.3s ease-in-out;
-        }
-        &:hover {
-          &:after,
-          &:focus {
-            width: 100%;
-          }
-        }
-      }
-      &.current-menu-item {
-        > a {
-          &:after,
-          &:focus {
-            width: 100%;
-          }
-        }
-      }
-      .sub-menu {
-        display: none;
-        background: $black;
-        position: absolute;
-        z-index: 1;
-        li {
-          margin: 0;
-          &.current-menu-item,
-          &:hover {
-            a {
-              background: $gold;
-              color: $black;
-              &:after {
-                display: none;
-              }
-            }
-          }
-        }
+        padding: 16px 24px;
+        text-transform: uppercase;
+        color: $blue;
       }
       &:hover {
-        .sub-menu {
-          display: block;
+        background: $blue;
+        a {
+          color: $yellow;
+          text-decoration: none;
         }
       }
     }
   }
+}
 
-  .languages {
-    display: flex;
-    align-items: center;
-    ul {
-      display: flex;
-      flex-direction: row;
-      li {
-        margin: 0 0 0 8px;
-      }
+.menu_search,
+.menu_support,
+.menu_member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 16px 24px;
+  .menu_icon {
+    background: url(image-url('/icons/search.svg')) center no-repeat;
+    background-size: cover;
+  }
+  .search_form {
+    display: none;
+  }
+  &.active {
+    .search_form {
+      display: block;
     }
-
+  }
+  &:hover {
+    background: $blue;
+    .menu_icon {
+      background: url(image-url('/icons/search_yellow.svg')) center no-repeat;
+      background-size: cover;
+    }
+    .menu_title {
+      color: $yellow;
+    }
   }
 }
 
@@ -107,7 +105,7 @@
       height: 3px;
       border-radius: 2px;
       margin: 8px 0;
-      background: $gold;
+      background: $blue;
       &:first-of-type,
       &:last-of-type {
         margin: 0;

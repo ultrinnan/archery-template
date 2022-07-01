@@ -16,31 +16,35 @@
 </head>
 
 <body>
-    <header class="<?=is_front_page()?'frontpage':'';?>">
-        <div class="container">
-            <div class="header_logo">
-                <a href="<?=home_url();?>" title="Marichka Motors"></a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="header_menu">
-                <?php wp_nav_menu([
-                    'theme_location' => 'header',
-                    'container' => false,
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'menu_class' => 'menu_list'
-                ]);?>
-                <div class="languages">
-                    <?
-                    if ( is_active_sidebar( 'languages' ) ) {
-                        dynamic_sidebar( 'languages' );
-                    }
-                    ?>
-                </div>
-            </div>
+    <header class="<?=is_front_page()?'frontpage':''?>">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header_logo">
+            <a href="<?=home_url();?>" title="Marichka Motors"></a>
+        </div>
+        <div class="header_menu">
+            <?php wp_nav_menu([
+                'theme_location' => 'header',
+                'container' => false,
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'menu_class' => 'menu_list'
+            ]);?>
+<!--            <div class="menu_support">-->
+<!--                <div class="menu_icon support"></div>-->
+<!--                <div class="menu_title">Підтримати</div>-->
+<!--            </div>-->
+<!--            <div class="menu_member">-->
+<!--                <div class="menu_icon member"></div>-->
+<!--                <div class="menu_title">Вхід</div>-->
+<!--            </div>-->
+        </div>
+        <div class="menu_search">
+            <div class="menu_icon search"></div>
+            <div class="menu_title">Пошук</div>
+            <?php get_search_form(); ?>
         </div>
     </header>
     <main>

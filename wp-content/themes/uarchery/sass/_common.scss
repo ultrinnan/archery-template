@@ -91,16 +91,16 @@ h4 {
 }
 
 .hero {
-  background: url(image-url('/listen-to-nature.jpg')) center no-repeat;
+  background: url(image-url('/bg/archery.jpg')) center no-repeat;
   background-size: cover;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 90px - 65px);
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   .container {
-    color: $gold;
+    color: $yellow;
     .title {
       font-size: 60px;
       margin-bottom: 24px;

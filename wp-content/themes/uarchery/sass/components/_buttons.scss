@@ -3,7 +3,7 @@
 
 a {
   text-decoration: none;
-  color: $gold;
+  color: inherit;
   &:hover {
     @include hover;
   }
