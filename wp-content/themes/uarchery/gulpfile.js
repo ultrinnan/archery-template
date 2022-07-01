@@ -1,9 +1,8 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -47,8 +46,7 @@ function styles() {
             })
         )
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(paths.styles.dest))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(paths.styles.dest));
 }
 
 /**
@@ -83,17 +81,6 @@ function scripts() {
  *  Watch changes
  */
 function watch() {
-    browserSync.init({
-        logSnippet: false,
-        server: false,
-        ui: false,
-        watchTask: true,
-        open: 'external',
-        host: 'marichka.local',
-        // proxy: 'marichka.local',
-        port: 80,
-    });
-
     gulp.watch(paths.styles.src + '**/*.scss', styles);
     gulp.watch(
         [paths.scripts.src + '*.js', `!${paths.scripts.src}*.min.js`],

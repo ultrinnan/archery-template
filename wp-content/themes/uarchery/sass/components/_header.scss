@@ -5,8 +5,7 @@ header {
   height: 90px;
   width: 100%;
   transition: all 0.3s;
-  background: $black;
-  color: $gold;
+  border-bottom: 3px solid $blue;
   &.frontpage {
     //maybe different
   }

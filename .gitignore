@@ -41,11 +41,11 @@ Thumbs.db
 /wp-content/plugins/
 /wp-content/mu-plugins/
 /wp-content/upgrade/
+/wp-config-docker.php
 
 !/wp-admin/.htaccess
 !/wp-includes/.htaccess
 /wp-content/themes/uarchery/logs/
-/wp-content/themes/
-!/wp-content/themes/uarchery
 /wp-content/themes/uarchery/node_modules/
 /wp-content/themes/uarchery/.sass-cache/
+/wp-content/themes/index.php

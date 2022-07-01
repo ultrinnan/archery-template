@@ -19,7 +19,7 @@ services:
       - db
     image: wordpress:latest
     volumes:
-      - ./wp-content:/var/www/html/wp-content
+      - ./:/var/www/html
     ports:
       - "8000:80"
     restart: always
@@ -28,6 +28,7 @@ services:
       WORDPRESS_DB_USER: archery
       WORDPRESS_DB_PASSWORD: archery
       WORDPRESS_DB_NAME: archery
+      WORDPRESS_DEBUG: true
 volumes:
   archery_db_data: {}
   wp-content: {}
