@@ -109,7 +109,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 //function cookieAccept() {
 //	$cookie_name = "cookieAccepted";
-//	$cookie_value = "Marichka-motorS rulZ!";
+//	$cookie_value = "uarchery-motorS rulZ!";
 //
 //	if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 //		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];

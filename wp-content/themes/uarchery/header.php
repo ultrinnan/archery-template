@@ -23,7 +23,7 @@
             <span></span>
         </div>
         <div class="header_logo">
-            <a href="<?=home_url();?>" title="Marichka Motors"></a>
+            <a href="<?=home_url();?>" title="UArchery"></a>
         </div>
         <div class="header_menu">
             <?php wp_nav_menu([

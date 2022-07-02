@@ -2,30 +2,40 @@
 @import '../helpers/mixins';
 
 .search_form {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  padding: 16px 24px;
+  width: 400px;
+  background: $blue;
+  text-align: right;
   .search_input {
     background: transparent;
-    width: 190px;
-    border-bottom: 1px solid #ccc;
-    color: #ccc;
-    position: relative;
-    top: -2px;
+    width: 90%;
+    margin-right: 8px;
+    padding: 2px;
+    border-bottom: 1px solid $yellow;
+    color: $yellow;
   }
   .search_button {
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     top: 0;
     right: 0;
-    background-image: url(image-url('/icons/magnifier-search.svg'));
-    background-color: transparent;
-    background-repeat: no-repeat;
+    background: url(image-url('/icons/search_yellow.svg')) center no-repeat;
+    background-size: cover;
   }
 }
 
 .search_page {
   &.head {
-    background: url(image-url('/bg/news.jpg')) center no-repeat;
+    background: url(image-url('/bg/archery.jpg')) center no-repeat;
     background-size: cover;
+  }
+  .no_results {
+    font-size: 32px;
   }
 }
 

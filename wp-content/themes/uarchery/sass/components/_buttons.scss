@@ -12,6 +12,21 @@ a {
   }
 }
 
+.button {
+  display: inline-block;
+  border: 2px solid $blue;
+  color: $blue;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  &:hover {
+    background: $blue;
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+
 @media screen and (max-width: 1440px) { // max-width: 1440px
 }
 

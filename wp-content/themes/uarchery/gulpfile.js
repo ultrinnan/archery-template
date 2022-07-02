@@ -6,7 +6,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const jshint = require('gulp-jshint');
 const babel = require('gulp-babel');
 
 const paths = {
@@ -50,16 +49,6 @@ function styles() {
 }
 
 /**
- * Check errors in scripts
- */
-function lint() {
-    return gulp
-        .src([paths.scripts.src + '*.js', `!${paths.scripts.src}*.min.js`])
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
-}
-
-/**
  *  Minify and concat all JS files
  */
 function scripts() {
@@ -84,7 +73,7 @@ function watch() {
     gulp.watch(paths.styles.src + '**/*.scss', styles);
     gulp.watch(
         [paths.scripts.src + '*.js', `!${paths.scripts.src}*.min.js`],
-        gulp.series(lint, scripts)
+        gulp.series(scripts)
     );
 }
 

@@ -37,7 +37,13 @@ jQuery(document).ready(function($) {
 
     $('.menu_search').on('click', function (e) {
         $('.menu_search').toggleClass('active');
-        console.log('search');
+        console.log('search!!');
+        // $('.modal_box').removeClass('hidden');
+        // $('.modal_box .modal_main').removeClass('hidden');
+    });
+    $('.search_form').on('click', function (e) {
+        $('.menu_search').toggleClass('active');
+        console.log('search!!');
         // $('.modal_box').removeClass('hidden');
         // $('.modal_box .modal_main').removeClass('hidden');
     });

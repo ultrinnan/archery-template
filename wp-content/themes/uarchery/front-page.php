@@ -9,9 +9,9 @@ get_header();
 
 <section class="section hero">
     <div class="container">
-        <h1><герб></h1>
+        <h1 class="title"><герб></h1>
         <br>
-        <h1 class="h1">UArchery</h1>
+        <h1 class="title">UArchery</h1>
     </div>
 </section>
 

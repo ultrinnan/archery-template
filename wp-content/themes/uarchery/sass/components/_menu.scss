@@ -61,6 +61,7 @@
   flex-direction: column;
   cursor: pointer;
   padding: 16px 24px;
+  position: relative;
   .menu_icon {
     background: url(image-url('/icons/search.svg')) center no-repeat;
     background-size: cover;
@@ -73,7 +74,8 @@
       display: block;
     }
   }
-  &:hover {
+  &:hover,
+  &.active {
     background: $blue;
     .menu_icon {
       background: url(image-url('/icons/search_yellow.svg')) center no-repeat;
@@ -81,6 +83,12 @@
     }
     .menu_title {
       color: $yellow;
+    }
+  }
+  &.active {
+    .menu_icon {
+      background: url(image-url('/icons/cross_yellow.svg')) center no-repeat;
+      background-size: cover;
     }
   }
 }

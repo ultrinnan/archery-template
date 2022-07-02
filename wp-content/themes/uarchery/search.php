@@ -1,39 +1,42 @@
-<?php get_header(); ?>
-    <section class="section head search_page">
-        <h1><?php _e( pll__('search_results') );?></h1>
+<?php
+    global $wp_query;
+    get_header();
+?>
+    <section class="search_page head">
+        <div class="container">
+            <h1>Результати пошуку за запитом "<?=$wp_query->query['s']?>"</h1>
+        </div>
     </section>
 
-    <section class="section breadcrumbs">
-	    <?php
-	    if(function_exists('bcn_display')) {
-		    bcn_display();
-	    }
-	    ?>
-    </section>
-
-    <section class="section search_page categories">
+    <section class="search_page">
         <div class="container">
             <div class="post_box">
 	            <?php
 	            if (have_posts()){
 		            while (have_posts()): the_post();
 			            $post_url = get_the_permalink();
-			            $thumb = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '/wp-content/themes/marichka/img/default_thumb.png';
+			            $thumb = get_the_post_thumbnail_url() ?: '/wp-content/themes/uarchery/img/bg/archery.jpg';
 			            $title = get_the_title();
-			            $date = get_the_date('d/m/Y');
+                        $exc = get_the_excerpt();
+			            $date = get_the_date('d.m.Y');
 			            ?>
                         <div class="post">
-                            <div class="preview_img" style="background: url(<?= $thumb; ?>) center no-repeat; background-size: cover"></div>
+                            <div class="preview">
+                                <a href="<?=$post_url?>" class="preview_img" style="background: url(<?= $thumb; ?>) center no-repeat; background-size: cover"></a>
+                            </div>
                             <div class="preview_description">
                                 <div class="post_date">
-						            <?=$date;?>
+						            <?=$date?>
                                 </div>
-                                <div class="post_title">
-						            <?= $title; ?>
+                                <a href="<?=$post_url?>" class="post_title">
+						            <?=$title?>
+                                </a>
+                                <div class="post_exc">
+                                    <?=$exc?>
                                 </div>
                                 <div class="post_read_more">
-                                    <a class="btn blue" href="<?= $post_url; ?>">
-							            <?=pll__('read_more');?>
+                                    <a class="button" href="<?=$post_url?>">
+							            Докладніше...
                                     </a>
                                 </div>
                             </div>
@@ -41,14 +44,19 @@
 		            <?php
 		            endwhile;
 	            } else {
-		            echo pll__('nothing_found');
+                    ?>
+                    <div class="no_results">
+                        <p>На жаль, нічого не знайдено...</p>
+                        <p>Спробуйте інший запит</p>
+                    </div>
+                    <?php
 	            }?>
             </div>
             <div class="pagination">
 		        <?php
 		        the_posts_pagination( [
-			        'prev_text'          => pll__( 'Previous' ),
-			        'next_text'          => pll__( 'Next' ),
+			        'prev_text'          => 'Попередня',
+			        'next_text'          => 'Наступна',
 		        ] );
 		        wp_reset_query(); // Restore the $wp_query and global post data to the original main query.
 		        ?>
