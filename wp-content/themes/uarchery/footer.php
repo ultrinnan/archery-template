@@ -6,6 +6,11 @@ $email = isset($options['email']) ? $options['email'] : '';
 
 </main>
 <footer>
+    <div class="footer_social">
+	    <?php
+	    get_template_part( 'partials/social' );
+	    ?>
+    </div>
 <!--    <div class="container">-->
 <!--        --><?php //wp_nav_menu([
 //            'theme_location' => 'footer',

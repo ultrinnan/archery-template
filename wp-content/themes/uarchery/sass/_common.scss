@@ -135,6 +135,110 @@ section {
   }
 }
 
+.latest_events {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: $blue;
+  color: $yellow;
+  .next_event {
+
+  }
+  .social_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .social_join {
+      font-size: 16px;
+    }
+    .social {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.map_section {
+  background: $blue;
+  color: $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    .archery_map {
+      text-decoration: none;
+      margin: auto;
+      img {
+        width: auto;
+        max-height: 30vh;
+      }
+    }
+  }
+  .right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    padding: 32px;
+    text-align: center;
+    h2 {
+      margin-bottom: 32px;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+.calendar_section {
+  color: $blue;
+  background: $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    padding: 32px;
+    text-align: center;
+    h2 {
+      margin-bottom: 32px;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+  .right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    .calendar {
+      text-decoration: none;
+      margin: auto;
+      img {
+        width: auto;
+        max-height: 30vh;
+      }
+    }
+  }
+}
+
 .hidden {
   display: none !important;
 }
@@ -146,10 +250,10 @@ section {
 
 //todo: remove it after normal amount of content, on front-page
 .hero {
+  position: relative;
   background: url(image-url('/bg/archery.jpg')) center no-repeat;
   background-size: cover;
-  height: calc(100vh - 90px - 65px);
-  min-height: 400px;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,10 +269,6 @@ section {
   }
   .container {
     color: $yellow;
-    .title {
-      font-size: 60px;
-      margin-bottom: 24px;
-    }
   }
 }
 

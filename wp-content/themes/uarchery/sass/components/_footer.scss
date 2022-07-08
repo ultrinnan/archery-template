@@ -4,6 +4,15 @@
 footer {
   min-height: 65px;
   padding: 0;
+  .footer_social {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $blue;
+    color: $yellow;
+  }
+
   .copyright{
     width: 100%;
     display: flex;
