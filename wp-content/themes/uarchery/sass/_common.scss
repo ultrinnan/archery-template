@@ -159,6 +159,61 @@ section {
   }
 }
 
+.featured {
+  display: flex;
+  align-items: center;
+  .main_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+  }
+  .latest_news {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    padding: 16px 24px;
+    .latest_article {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .latest_preview {
+        width: 30%;
+        height: 100px;
+        overflow: hidden;
+        transition: all 0.3s;
+        &:hover {
+          .preview_img {
+            width: 120%;
+            height: 120%;
+          }
+        }
+        .preview_img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .latest_description {
+        width: 70%;
+        padding: 0 0 0 24px;
+        .post_date {
+          font-size: 8px;
+        }
+        .post_title {
+          color: $blue;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
 .map_section {
   background: $blue;
   color: $yellow;
@@ -176,7 +231,7 @@ section {
       margin: auto;
       img {
         width: auto;
-        max-height: 30vh;
+        max-height: 25vh;
       }
     }
   }
@@ -233,7 +288,7 @@ section {
       margin: auto;
       img {
         width: auto;
-        max-height: 30vh;
+        max-height: 25vh;
       }
     }
   }
@@ -243,17 +298,12 @@ section {
   display: none !important;
 }
 
-.slick-track {
-  display: flex;
-  align-items: center;
-}
-
 //todo: remove it after normal amount of content, on front-page
 .hero {
   position: relative;
   background: url(image-url('/bg/archery.jpg')) center no-repeat;
   background-size: cover;
-  min-height: 30vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;

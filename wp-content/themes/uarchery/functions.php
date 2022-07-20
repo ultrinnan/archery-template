@@ -13,13 +13,9 @@ require 'admin/admin_customizations.php';
 // Common scripts and styles
 function f_scripts_styles()
 {
-    // Connect styles
-//	wp_enqueue_style('slick_css', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
-//	wp_enqueue_style('slick_css_theme', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css");
 	wp_enqueue_style('f_style', get_template_directory_uri() . '/css/main.min.css');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 
-//	wp_enqueue_script('slick_js', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", array('jquery'), '1.0', true);
 	wp_enqueue_script('f_scripts', get_template_directory_uri() . '/js/main.min.js', array('jquery'), '1.0', true);
 }
 // Create action where we connected scripts and styles in function f_scripts_styles
@@ -41,30 +37,11 @@ function my_widget_title($t)
 
 // create widget for languages
 register_sidebar(array(
-	'name' => 'Language switcher',
-	'id' => 'languages',
+	'name' => 'main_slider',
+	'id' => 'main_slider',
 	'before_widget' => '',
 	'after_widget' => '',
 ));
-// create widget 404 page
-register_sidebar(array(
-	'name' => 'Page 404 content',
-	'id' => 'page404',
-	'before_widget' => '',
-	'after_widget' => '',
-));
-// create widget for cookie
-register_sidebar(array(
-	'name' => 'Cookie consent',
-	'id' => 'cookie_consent',
-	'before_widget' => '',
-	'after_widget' => '',
-));
-
-//theme translations
-if (function_exists('pll_register_string')) {
-	pll_register_string( '404_header', '404_header', 'template', false );
-}
 
 //Feedback custom post type
 function feedback_post_type() {
