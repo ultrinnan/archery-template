@@ -25,6 +25,33 @@ a {
     color: $yellow;
     text-decoration: none;
   }
+  &.arrowed {
+    position: relative;
+    padding-right: 32px;
+    &:before {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 3px solid transparent;
+      border-top-color: $yellow;
+      border-right-color: $yellow;
+    }
+    &:after {
+      position: absolute;
+      right: 4px;
+      top: 10px;
+      content: '';
+      display: block;
+      width: 15px;
+      height: 3px;
+      background-color: $yellow;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 @media screen and (max-width: 1440px) { // max-width: 1440px

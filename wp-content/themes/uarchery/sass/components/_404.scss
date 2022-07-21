@@ -3,10 +3,14 @@
 
 .error404 {
   text-align: center;
-
+  &.head {
+    background: url(image-url('/bg/archery.jpg')) center no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+  }
   .container {
     h1 {
-      color: $gold;
+      color: $yellow;
       font-size: 100px;
       margin: 32px auto;
     }

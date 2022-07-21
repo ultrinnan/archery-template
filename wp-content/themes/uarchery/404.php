@@ -8,19 +8,16 @@
 get_header();
 ?>
 
-<section class="section error404">
+<section class="error404 head">
     <div class="container">
         <h1>404</h1>
-        <h2><?=pll__('404_header');?></h2>
+        <h2>На жаль, цю сторінку не знайдено...</h2>
     </div>
 </section>
-<section class="section error404">
+
+<section class="error404">
     <div class="container">
-        <?php
-        if ( is_active_sidebar( 'page404' ) ) {
-            dynamic_sidebar( 'page404' );
-        }
-        ?>
+        <div>Почніть з головної чи скористайтеся пошуком</div>
     </div>
 </section>
 

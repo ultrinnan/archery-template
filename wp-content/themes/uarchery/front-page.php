@@ -27,37 +27,41 @@ get_header();
 	    ?>
     </div>
     <div class="latest_news">
-		<?php
-            $post_args = array(
-                'post_type' => 'post',
-                'category_name' => 'news',
-                'posts_per_page' => 5
-            );
-            //wp query
-            $post_query = new WP_Query($post_args);
-            while ( $post_query->have_posts() ) :
-                $post_query->the_post();
-                $post_url = get_the_permalink();
-                $thumb = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '/wp-content/themes/uarchery/img/default_article.jpg';
-	            $date = get_the_date('d.m.Y');
-	            $title = get_the_title();
-            ?>
-            <div class="latest_article">
-                <div class="latest_preview">
-                    <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: cover"></a>
-                </div>
-                <div class="latest_description">
-                    <div class="post_date">
-                        <?=$date?>
+        <h2>Свіжі новини</h2>
+        <div class="latest_list">
+	        <?php
+	        $post_args = array(
+		        'post_type' => 'post',
+		        'category_name' => 'news',
+		        'posts_per_page' => 4
+	        );
+	        //wp query
+	        $post_query = new WP_Query($post_args);
+	        while ( $post_query->have_posts() ) :
+		        $post_query->the_post();
+		        $post_url = get_the_permalink();
+		        $thumb = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '/wp-content/themes/uarchery/img/default_article.jpg';
+		        $date = get_the_date('d.m.Y');
+		        $title = get_the_title();
+		        ?>
+                <div class="latest_article">
+                    <div class="latest_preview">
+                        <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: cover"></a>
                     </div>
-                    <a href="<?=$post_url?>" class="post_title">
-                        <?=$title?>
-                    </a>
+                    <div class="latest_description">
+                        <div class="post_date">
+					        <?=$date?>
+                        </div>
+                        <a href="<?=$post_url?>" class="post_title">
+					        <?=$title?>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        <?php
-            endwhile;
-        ?>
+	        <?php
+	        endwhile;
+	        ?>
+        </div>
+        <a class="button arrowed" href="/news">Всі новини</a>
     </div>
 </section>
 
@@ -102,15 +106,5 @@ get_header();
         </a>
     </div>
 </div>
-
-<section class="hero">
-    <div class="container">
-        <h1 class="title"><герб></h1>
-        <br>
-        <h1 class="title">UArchery</h1>
-        <br>
-        <h2 class="title">Розвиток і популяризація стрільби з лука в Україні</h2>
-    </div>
-</section>
 
 <?php get_footer(); ?>

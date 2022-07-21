@@ -18,7 +18,7 @@ body {
 
 main {
   position: relative;
-  min-height: calc(100vh - 90px - 65px);
+  min-height: calc(100vh - 90px - 137.5px);
 }
 
 h1,
@@ -44,6 +44,8 @@ h4 {
 
 section {
   &.head {
+    background: url(image-url('/bg/archery.jpg')) center no-repeat;
+    background-size: cover;
     position: relative;
     min-height: 30vh;
     display: flex;
@@ -161,53 +163,54 @@ section {
 
 .featured {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   .main_slider {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 70%;
+    padding: 16px 24px;
   }
   .latest_news {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     width: 30%;
     padding: 16px 24px;
-    .latest_article {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 16px;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-      .latest_preview {
-        width: 30%;
-        height: 100px;
-        overflow: hidden;
-        transition: all 0.3s;
-        &:hover {
+    h2 {
+      color: $blue;
+    }
+    .latest_list {
+      margin: 24px 0;
+      .latest_article {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 16px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        .latest_preview {
+          width: 30%;
+          height: 100px;
+          overflow: hidden;
           .preview_img {
-            width: 120%;
-            height: 120%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
-        .preview_img {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .latest_description {
-        width: 70%;
-        padding: 0 0 0 24px;
-        .post_date {
-          font-size: 8px;
-        }
-        .post_title {
-          color: $blue;
-          font-size: 24px;
+        .latest_description {
+          width: 70%;
+          padding: 0 0 0 24px;
+          .post_date {
+            font-size: 12px;
+          }
+          .post_title {
+            color: $blue;
+            font-size: 24px;
+          }
         }
       }
     }
