@@ -15,7 +15,7 @@
 	            if (have_posts()){
 		            while (have_posts()): the_post();
 			            $post_url = get_the_permalink();
-			            $thumb = get_the_post_thumbnail_url() ?: '/wp-content/themes/uarchery/img/bg/archery.jpg';
+			            $thumb = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/img/bg/default.jpg';
 			            $title = get_the_title();
                         $exc = get_the_excerpt();
 			            $date = get_the_date('d.m.Y');

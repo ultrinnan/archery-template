@@ -68,6 +68,12 @@
         .sub-menu {
           display: none;
         }
+        &.current-menu-item {
+          &:after {
+            border-right-color: $yellow;
+            border-bottom-color: $yellow;
+          }
+        }
         &:hover {
           &:after {
             border-right-color: $yellow;

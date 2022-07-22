@@ -61,6 +61,21 @@ section {
       top: 0;
     }
   }
+
+  &.breadcrumbs {
+    background: $blue;
+    color: $yellow;
+    .container {
+      padding: 16px 0;
+      a,
+      .breadcrumb_last {
+        margin: 0 16px;
+      }
+      > span > span > a {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .container {
@@ -120,6 +135,32 @@ section {
         .post_read_more {
           margin-top: 8px;
         }
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    .content_meta {
+      font-size: 12px;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      .date {
+        color: $yellow;
+      }
+      .author {
+        color: $blue;
+      }
+    }
+    .article {
+      position: relative;
+      figcaption {
+        font-size: 12px;
+        opacity: 0.5;
+        text-align: center;
       }
     }
   }
