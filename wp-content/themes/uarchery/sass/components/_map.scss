@@ -9,6 +9,22 @@
     min-height: auto;
   }
   .container {
+    .leaflet-popup-content-wrapper {
+      border-radius: 0;
+      .leaflet-popup-content {
+        margin: 0;
+        padding: 8px 16px;
+        .umsMarkerTitle {
+          margin-top: 0;
+        }
+        p {
+          margin: 0 0 8px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
     //test
   }
 }
