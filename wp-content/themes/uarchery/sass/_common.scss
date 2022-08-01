@@ -44,7 +44,7 @@ h4 {
 
 section {
   &.head {
-    background: url(image-url('/bg/archery.jpg')) center no-repeat;
+    background: url(image-url('/bg/default.jpg')) center no-repeat;
     background-size: cover;
     position: relative;
     min-height: 30vh;
@@ -258,6 +258,10 @@ section {
   }
 }
 
+.leaflet-popup-content p {
+  color: red;
+}
+
 .map_section {
   background: $blue;
   color: $yellow;
@@ -345,7 +349,7 @@ section {
 //todo: remove it after normal amount of content, on front-page
 .hero {
   position: relative;
-  background: url(image-url('/bg/archery.jpg')) center no-repeat;
+  background: url(image-url('/bg/default.jpg')) center no-repeat;
   background-size: cover;
   min-height: 40vh;
   display: flex;

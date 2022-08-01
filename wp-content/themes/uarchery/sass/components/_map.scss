@@ -1,22 +1,15 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.error404 {
+.map {
   text-align: center;
   &.head {
     background: url(image-url('/bg/default.jpg')) center no-repeat;
     background-size: cover;
-    min-height: 40vh;
+    min-height: auto;
   }
   .container {
-    h1 {
-      color: $yellow;
-      font-size: 100px;
-      margin: 32px auto;
-    }
-    h2 {
-      margin-bottom: 24px;
-    }
+    //test
   }
 }
 
