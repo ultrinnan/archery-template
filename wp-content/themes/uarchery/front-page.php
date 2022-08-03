@@ -67,8 +67,6 @@ get_header();
 
 <section class="hero">
     <div class="container">
-        <h1 class="title"><герб></h1>
-        <br>
         <h1 class="title">UArchery</h1>
         <br>
         <h2 class="title">Розвиток і популяризація стрільби з лука в Україні</h2>
