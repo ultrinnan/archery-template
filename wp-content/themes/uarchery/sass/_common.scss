@@ -11,6 +11,7 @@ body {
   position: relative;
   background: $white;
   color: #333;
+  font-size: 16px;
   &.lock {
     overflow: hidden;
   }
@@ -123,7 +124,7 @@ section {
       .preview_description {
         padding-left: 24px;
         .post_date {
-          color: $yellow;
+          opacity: 0.8;
         }
         .post_title {
           display: block;
@@ -151,13 +152,11 @@ section {
       justify-content: space-between;
       margin-bottom: 32px;
       .date {
-        color: $yellow;
       }
       .author {
         color: $blue;
       }
       .source {
-        color: $yellow;
         text-align: right;
         width: 100%;
       }
