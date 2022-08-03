@@ -42,7 +42,7 @@ if ($bg) {
 		            ?>
                     <div class="content_meta">
                         <div class="source">
-                            За матеріалами: <?=$source?>
+                            За матеріалами: <a rel="nofollow" target="_blank" href="<?=$source?>"><?=$source?></a>
                         </div>
                     </div>
 		            <?php
