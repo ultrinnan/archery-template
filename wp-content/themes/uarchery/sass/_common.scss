@@ -154,6 +154,11 @@ section {
       .author {
         color: $blue;
       }
+      .source {
+        color: $yellow;
+        text-align: right;
+        width: 100%;
+      }
     }
     .article {
       position: relative;
@@ -427,6 +432,14 @@ section {
       }
       .subtitle {
         font-size: 32px;
+      }
+    }
+  }
+  section.breadcrumbs {
+    .container {
+      .breadcrumb_last,
+      a {
+        margin: 0;
       }
     }
   }

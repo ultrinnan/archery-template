@@ -36,6 +36,18 @@ if ($bg) {
 		                <?php the_content(); ?>
 	                <?php endwhile; endif; ?>
                 </div>
+                <?php
+                $source = get_field('source');
+                if ($source) {
+                    ?>
+                    <div class="content_meta">
+                        <div class="source">
+                            За матеріалами: <?=$source?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
 	    <?php

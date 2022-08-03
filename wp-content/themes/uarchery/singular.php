@@ -8,19 +8,19 @@ if ($bg) {
 	$style = '';
 }
 ?>
-    <section class="single head" <?=$style?>>
+    <section class="singular head" <?=$style?>>
         <div class="container">
             <h1><?php the_title(); ?></h1>
         </div>
     </section>
 
-<?php
-if ( function_exists('yoast_breadcrumb') ) {
-	yoast_breadcrumb( '<section class="breadcrumbs"><div class="container">','</div></section>' );
-}
-?>
+    <?php
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb( '<section class="breadcrumbs"><div class="container">','</div></section>' );
+    }
+    ?>
 
-    <section class="single">
+    <section class="singular">
         <div class="container">
             <div class="content">
                 <div class="content_meta">
@@ -36,6 +36,18 @@ if ( function_exists('yoast_breadcrumb') ) {
 						<?php the_content(); ?>
 					<?php endwhile; endif; ?>
                 </div>
+	            <?php
+	            $source = get_field('source');
+	            if ($source) {
+		            ?>
+                    <div class="content_meta">
+                        <div class="source">
+                            За матеріалами: <?=$source?>
+                        </div>
+                    </div>
+		            <?php
+	            }
+	            ?>
             </div>
         </div>
 		<?php
