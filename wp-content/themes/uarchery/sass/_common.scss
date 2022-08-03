@@ -11,7 +11,7 @@ body {
   position: relative;
   background: $white;
   color: #333;
-  &.modal_lock {
+  &.lock {
     overflow: hidden;
   }
 }

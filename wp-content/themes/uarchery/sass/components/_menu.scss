@@ -149,16 +149,14 @@
 }
 
 @media screen and (max-width: 1024px) { // max-width: 1024px
-}
-
-@media screen and (max-width: 768px) { // max-width: 768px
-}
-
-@media screen and (max-width: 590px) { // max-width: 590px
   .hamburger {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     opacity: 1;
     transition: all 0.3s;
+    padding: 16px;
     span {
       display: block;
       width: 32px;
@@ -176,38 +174,33 @@
       opacity: 0;
     }
   }
-
   .header_menu {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: -100%;
-    height: calc(var(--vh, 1vh) * 100);
+    //height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
     width: 100%;
-    overflow: scroll;
     transition: all 0.3s;
-    padding: 40px;
+    padding: 0 10% 0 0;
     &.active {
       left: 0;
       transition: all 0.3s;
-      background: rgba(0, 0, 0, 0.95);
     }
     .menu_list {
       flex-direction: column;
-      .menu-item {
-        a {
-          padding: 8px;
-          font-size: 24px;
-        }
-        &.current-menu-item {
-          > a {
-            background: $gold;
-            color: $black;
-            &:after {
-              display: none;
-            }
-          }
+      background: rgba(0, 0, 0, 0.9);
+      height: 100%;
+      padding: 16px 0;
+      overflow: scroll;
+      li.menu-item-has-children {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &:after {
+          display: none;
         }
         .sub-menu {
           display: block;
@@ -216,10 +209,25 @@
           background: transparent;
           li {
             a {
-              font-size: 20px;
+              font-size: 16px;
               &:after {
                 display: none;
               }
+            }
+          }
+        }
+      }
+      .menu-item {
+        a {
+          padding: 16px 32px;
+          font-size: 24px;
+          color: white;
+        }
+        &.current-menu-item {
+          > a {
+            color: $yellow;
+            &:after {
+              display: none;
             }
           }
         }
@@ -245,4 +253,17 @@
       }
     }
   }
+
+  .menu_search,
+  .menu_support,
+  .menu_member {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) { // max-width: 768px
+}
+
+@media screen and (max-width: 590px) { // max-width: 590px
+
 }

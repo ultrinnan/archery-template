@@ -10,6 +10,7 @@
   width: 400px;
   background: $blue;
   text-align: right;
+  box-shadow: -4px 4px 4px 0px rgb(0, 0, 0, 30%);
   .search_input {
     background: transparent;
     width: 90%;
@@ -49,4 +50,10 @@
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
+  .search_form {
+    width: 100vw;
+    .search_input {
+      margin-right: 6px;
+    }
+  }
 }
