@@ -232,6 +232,7 @@ section {
         }
         .latest_preview {
           width: 30%;
+          min-width: 115px;
           height: 100px;
           overflow: hidden;
           .preview_img {
