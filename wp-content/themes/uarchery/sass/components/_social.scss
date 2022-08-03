@@ -49,5 +49,10 @@
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
-
+  .social_join {
+    width: 100%;
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 16px;
+  }
 }

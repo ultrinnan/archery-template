@@ -44,4 +44,7 @@ footer {
 }
 
 @media screen and (max-width: 590px) { // max-width: 590px
+  .footer_social {
+    flex-wrap: wrap;
+  }
 }

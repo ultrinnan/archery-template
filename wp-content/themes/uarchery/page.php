@@ -14,12 +14,6 @@ if ($bg) {
         </div>
     </section>
 
-<?php
-if ( function_exists('yoast_breadcrumb') ) {
-	yoast_breadcrumb( '<section class="breadcrumbs"><div class="container">','</div></section>' );
-}
-?>
-
     <section class="page">
         <div class="container">
             <div class="content">
