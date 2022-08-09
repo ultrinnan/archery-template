@@ -9,6 +9,12 @@
     min-height: auto;
   }
   .container {
+    .wp-block-table {
+      td {
+        padding: 8px;
+        vertical-align: middle;
+      }
+    }
     .leaflet-popup-content-wrapper {
       border-radius: 0;
       .leaflet-popup-content {

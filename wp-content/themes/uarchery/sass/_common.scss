@@ -181,6 +181,15 @@ section {
           width: auto;
         }
       }
+      .wp-block-table {
+        td {
+          padding: 8px;
+          vertical-align: middle;
+          &:first-of-type {
+            padding-right: 24px;
+          }
+        }
+      }
       .wp-block-separator {
         margin: 32px auto;
         width: 50%;
