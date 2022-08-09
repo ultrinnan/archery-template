@@ -34,6 +34,11 @@ $result = get_option('social_options');
         </div>
 
         <div class="form-group">
+            <label for="telegram">Telegram link:</label>
+            <input type="url" class="form-control" id="telegram" name="telegram" value="<?=$result['telegram']??null?>">
+        </div>
+
+        <div class="form-group">
             <label for="youtube">Youtube link:</label>
             <input type="url" class="form-control" id="youtube" name="youtube" value="<?=$result['youtube']??null?>">
         </div>
