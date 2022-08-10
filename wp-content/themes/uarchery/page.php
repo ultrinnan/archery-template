@@ -3,7 +3,7 @@ get_header();
 
 $bg = get_field('background');
 if ($bg) {
-	$style = 'style="background: url('. $bg .') center top no-repeat; background-size: cover"';
+	$style = 'style="background: url('. $bg .') center no-repeat; background-size: cover"';
 } else {
 	$style = '';
 }
