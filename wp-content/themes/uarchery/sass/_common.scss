@@ -176,6 +176,15 @@ section {
         margin-top: 24px;
         margin-bottom: 24px;
       }
+      ul {
+        margin: 24px 0 24px;
+        list-style-type: disc;
+        list-style-position: inside;
+        li {
+          margin: 0 0 16px 0;
+          line-height: 1.5;
+        }
+      }
       .wp-block-image {
         margin-top: 24px;
         margin-bottom: 24px;
