@@ -178,10 +178,12 @@ section {
       }
       ul {
         margin: 24px 0 24px;
+        padding-left: 24px;
         list-style-type: disc;
-        list-style-position: inside;
+        list-style-position: outside;
         li {
           margin: 0 0 16px 0;
+          padding-left: 8px;
           line-height: 1.5;
         }
       }
