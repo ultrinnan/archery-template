@@ -36,6 +36,18 @@ if ( function_exists('yoast_breadcrumb') ) {
 						<?php the_content(); ?>
 					<?php endwhile; endif; ?>
                 </div>
+	            <?php
+	            $source = get_field('source');
+	            if ($source) {
+		            ?>
+                    <div class="content_meta">
+                        <div class="source">
+                            За матеріалами: <a rel="nofollow" target="_blank" href="<?=$source?>"><?=$source?></a>
+                        </div>
+                    </div>
+		            <?php
+	            }
+	            ?>
             </div>
         </div>
 		<?php
