@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Events page
+ * Template Name: Events single page
  */
 
 get_header();
@@ -18,6 +18,12 @@ if ($bg) {
         </div>
     </section>
 
+    <?php
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb( '<section class="breadcrumbs"><div class="container">','</div></section>' );
+    }
+    ?>
+
     <section class="events">
         <div class="container">
             <div class="content">
@@ -28,6 +34,9 @@ if ($bg) {
                 </div>
             </div>
         </div>
+	    <?php
+	    get_template_part( 'partials/tags' );
+	    ?>
     </section>
 
 <?php get_footer(); ?>

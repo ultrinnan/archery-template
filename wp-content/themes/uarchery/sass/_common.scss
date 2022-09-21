@@ -169,6 +169,7 @@ section {
       position: relative;
       a {
         color: $blue;
+        word-break: break-word;
       }
       p {
         line-height: 24px;
