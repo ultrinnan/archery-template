@@ -91,7 +91,7 @@ get_header();
 
 <div class="calendar_section">
     <div class="left">
-        <a href="/calendar">
+        <a href="/events">
             <h2>Календар лучних подій</h2>
         </a>
         <div>
@@ -99,7 +99,7 @@ get_header();
         </div>
     </div>
     <div class="right">
-        <a href="/calendar" class="calendar">
+        <a href="/events" class="calendar">
             <img src="<?php echo get_template_directory_uri(); ?>/img/calendar.png" alt="ukraine archery calendar">
         </a>
     </div>
