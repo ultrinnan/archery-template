@@ -1,0 +1,31 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.events {
+  .em {
+    .em-list {
+      .em-item {
+        .em-item-image {
+          text-align: center;
+          img {
+            //todo: set max height
+            //max-height: 50vh;
+            //width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) { // max-width: 1440px
+}
+
+@media screen and (max-width: 1024px) { // max-width: 1024px
+}
+
+@media screen and (max-width: 768px) { // max-width: 768px
+}
+
+@media screen and (max-width: 590px) { // max-width: 590px
+}
