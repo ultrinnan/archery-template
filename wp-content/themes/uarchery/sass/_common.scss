@@ -36,6 +36,8 @@ h1 {
 }
 h2 {
   font-size: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 h3 {
   font-size: 24px;
@@ -208,6 +210,15 @@ section {
       .wp-block-separator {
         margin: 32px auto;
         width: 50%;
+      }
+      .wp-block-embed {
+        &.aligncenter {
+          .wp-block-embed__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
       }
       figcaption {
         font-size: 12px;
