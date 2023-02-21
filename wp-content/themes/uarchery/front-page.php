@@ -9,7 +9,7 @@ get_header();
 
 <section class="latest_events">
     <div class="next_event">
-        Найближча подія: <a href="#">Турнір "Тернопільські мрії", Тернопіль, 2022</a>
+        Найближча подія: <a href="#">Турнір "Тернопільські мрії", Тернопіль, 2023</a>
     </div>
     <div class="social_top">
 	    <?php
@@ -27,7 +27,7 @@ get_header();
 	    ?>
     </div>
     <div class="latest_news">
-        <h2>Свіжі новини</h2>
+        <h2>Новини</h2>
         <div class="latest_list">
 	        <?php
 	        $post_args = array(
