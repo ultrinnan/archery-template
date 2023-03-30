@@ -3,10 +3,6 @@ WP template and dev environment
 
 ---
 
-Font - https://thedigital.gov.ua/fonts
-
----
-
 Docker-compose file was added for local development.
 
 `docker compose up -d`
@@ -22,3 +18,5 @@ To have local database just need to export it from live site via wp-migrate plug
 ## Frontend build
 
 navigate to this template folder and run `npm install` and then just `gulp`
+
+local site available at http://localhost:8000/

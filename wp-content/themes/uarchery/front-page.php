@@ -9,7 +9,8 @@ get_header();
 
 <section class="latest_events">
     <div class="next_event">
-        Найближча подія: <a href="#">Турнір "Тернопільські мрії", Тернопіль, 2023</a>
+<!--        todo: get latest event-->
+<!--        Найближча подія: <a href="#">Турнір "Тернопільські мрії", Тернопіль, 2023</a>-->
     </div>
     <div class="social_top">
 	    <?php

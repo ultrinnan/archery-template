@@ -105,6 +105,15 @@
   }
 }
 
+.footer_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    width: 22%;
+  }
+}
+
 .menu_search,
 .menu_support,
 .menu_member {
