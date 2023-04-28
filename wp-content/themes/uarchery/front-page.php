@@ -47,7 +47,7 @@ get_header();
 		        ?>
                 <div class="latest_article">
                     <div class="latest_preview">
-                        <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: cover"></a>
+                        <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: contain"></a>
                     </div>
                     <div class="latest_description">
                         <div class="post_date">

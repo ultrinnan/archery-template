@@ -36,7 +36,7 @@ get_header();
 					?>
                     <div class="post">
                         <div class="preview">
-                            <a href="<?=$post_url?>" class="preview_img" style="background: url(<?= $thumb; ?>) center no-repeat; background-size: cover"></a>
+                            <a href="<?=$post_url?>" class="preview_img" style="background: url(<?= $thumb; ?>) center no-repeat; background-size: contain"></a>
                         </div>
                         <div class="preview_description">
                             <div class="post_date">
