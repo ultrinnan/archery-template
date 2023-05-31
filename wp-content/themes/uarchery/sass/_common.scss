@@ -278,13 +278,7 @@ section {
 .featured {
   display: flex;
   align-items: flex-start;
-  .main_slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    padding: 16px 24px;
-  }
+  justify-content: center;
   .latest_news {
     width: 30%;
     padding: 16px 24px;
@@ -476,9 +470,7 @@ section {
 
 @media screen and (max-width: 1024px) { // max-width: 1024px
   .featured {
-    .main_slider {
-      display: none;
-    }
+    flex-direction: column-reverse;
     .latest_news {
       width: 100%;
     }
@@ -537,13 +529,13 @@ section {
   .latest_events {
     flex-direction: column;
     .next_event {
-      text-align: center;
+      display: none;
     }
     .social_top {
       flex-wrap: wrap;
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid $yellow;
+      //margin-top: 24px;
+      //padding-top: 16px;
+      //border-top: 1px solid $yellow;
     }
   }
 
