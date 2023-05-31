@@ -60,11 +60,20 @@ get_header();
         <h2>Найближчі події</h2>
         <div class="latest_list">
 	        <?php
-	        $post_args = array(
-		        'post_type' => 'event',
-//		        'category_name' => 'news',
-		        'posts_per_page' => 4
-	        );
+	        $post_args = [
+                'post_type' => 'event',
+                'orderby' => '_event_start_date',
+		        'order' => 'ASC',
+		        'posts_per_page' => 4,
+                'meta_query' => array(
+	                array(
+		                'key' => '_event_start_date',
+                        'value'   => date('Y-m-d'), // current date in 'Y-m-d' format
+                        'compare' => '>=', // Greater than or equal to today
+                        'type'    => 'DATE', // Let WordPress know we're working with date
+	                )
+                )
+            ];
 	        //wp query
 	        $post_query = new WP_Query($post_args);
 	        while ( $post_query->have_posts() ) :
