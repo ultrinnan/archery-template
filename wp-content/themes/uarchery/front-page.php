@@ -76,31 +76,42 @@ get_header();
             ];
 	        //wp query
 	        $post_query = new WP_Query($post_args);
-	        while ( $post_query->have_posts() ) :
-		        $post_query->the_post();
-		        $post_url = get_the_permalink();
-		        $thumb = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '/wp-content/themes/uarchery/img/default_article.jpg';
-		        $date = get_the_date('d.m.Y');
-		        $title = get_the_title();
-		        ?>
-                <div class="latest_article">
-                    <div class="latest_preview">
-                        <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: contain"></a>
-                    </div>
-                    <div class="latest_description">
-                        <div class="post_date">
-					        <?=$date?>
+            if ($post_query->post_count) {
+	            while ( $post_query->have_posts() ) :
+		            $post_query->the_post();
+		            $post_url = get_the_permalink();
+		            $thumb = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : '/wp-content/themes/uarchery/img/default_article.jpg';
+		            $date = get_the_date('d.m.Y');
+		            $title = get_the_title();
+		            ?>
+                    <div class="latest_article">
+                        <div class="latest_preview">
+                            <a href="<?=$post_url?>" class="preview_img" style="background: url(<?=$thumb?>) center no-repeat; background-size: contain"></a>
                         </div>
-                        <a href="<?=$post_url?>" class="post_title">
-					        <?=$title?>
-                        </a>
+                        <div class="latest_description">
+                            <div class="post_date">
+					            <?=$date?>
+                            </div>
+                            <a href="<?=$post_url?>" class="post_title">
+					            <?=$title?>
+                            </a>
+                        </div>
                     </div>
-                </div>
-	        <?php
-	        endwhile;
+	            <?php
+	            endwhile;
+                echo '<a class="button arrowed" href="/events">Всі події</a>';
+            } else {
+                ?>
+                <h3>Нажаль, не знайдено анонсів найближчих подій...</h3>
+                <br>
+                <p>Якщо ви організатор або знаєте про подію, що скоро відбудеться - напишіть нам на адресу
+                    <b><a class="link" href="mailto:info@uarchery.org">info@uarchery.org</a></b> і ми додамо її в календар!
+                </p>
+	            <?php
+            }
 	        ?>
         </div>
-        <a class="button arrowed" href="/events">Всі події</a>
+
     </div>
 </section>
 
