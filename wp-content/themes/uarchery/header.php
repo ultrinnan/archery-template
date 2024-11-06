@@ -47,44 +47,14 @@
             <?php get_search_form(); ?>
         </div>
     </header>
-    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border: 2px solid #333;">
-      <img src="https://uarchery.org/wp-content/uploads/2024/04/for-sale.jpeg" alt="For sale" style="width: 50%; height: auto;">
+    <div id="popup" style="display: none; text-align: center; position: fixed; z-index: 3; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 20px; border: 2px solid #333;">
+      <img src="https://uarchery.org/wp-content/uploads/2024/04/for-sale.jpeg" alt="For sale" style="width: 50%; height: auto; margin: 40px auto;">
       <div>
-        <p>Проект UArchery.org продається разом з усіма повʼязаними акаунтами в соцмережах:</p>
-        <ul>
-          <li>https://www.facebook.com/uarchery.org/</li>
-          <li>https://twitter.com/uarchery_org</li>
-          <li>https://t.me/uarchery_org</li>
-        </ul>
-
-        <p>а також в сервісах</p>
-        <ul>
-          <li>https://www.patreon.com/uarchery</li>
-          <li>https://ko-fi.com/uarchery</li>
-        </ul>
-
-        <p>Особливості проекту:</p>
-
-        <ul>
-          <li>
-            унікальний “SEO-friendly” домен – адреса сайту ідеальна для будь чого повʼязаного зі стрільбою з лука. Можна продовжувати розвивати проект чи зробити переадресацію на ваш проект
-          </li>
-          <li>
-            інтерактивний календар лучних подій України
-          </li>
-          <li>
-            унікальна лучна карта України – клуби, магазини, школи
-          </li>
-          <li>
-            зручний і простий дизайн, адаптований під всі мобільні пристрої
-          </li>
-          <li>
-            PWA мобільний додаток з можливістю додавання функціоналу чи створення чого завгодно на його основі
-          </li>
-        </ul>
+        <p>Проект UArchery.org продається разом з усіма повʼязаними акаунтами в соцмережах і інших сервісах!</p>
+        <div>Детальніше - <a href="https://uarchery.org/articles/project-for-sale/">https://uarchery.org/articles/project-for-sale/</a></div>
         <p>Всім зацікавленим прохання писати на пошту – info@uarchery.org</p>
       </div>
-      <button onclick="closePopup()">Закрити</button>
+      <button class="button" onclick="closePopup()" style="margin: 40px auto">Закрити</button>
     </div>
     <script>
       function setCookie(name, value, days) {
